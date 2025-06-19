@@ -142,13 +142,13 @@ def barplot(df, year, countries, mode):
         col: VALUE_TRANSLATIONS[col] for col in nutrient_columns})
 
     # Convertir a format llarg
-    bar_df = bar_df.melt(id_vars="Country", var_name="Macronutrient", value_name="Desviació")
+    bar_df = bar_df.melt(id_vars="Country", var_name="Macronutrient", value_name="Desviacio")
 
     # Gràfic de barres
     fig_bar = px.bar(
         bar_df,
         x="Macronutrient",
-        y="Desviació",
+        y="Desviacio",
         color="Country",
         barmode="group"
     )

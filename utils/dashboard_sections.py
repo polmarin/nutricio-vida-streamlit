@@ -148,11 +148,11 @@ def barplot(df, year, countries, mode):
     fig_bar = px.bar(
         bar_df,
         x="Macronutrient",
-        y="Desviació (%)",
+        y="Desviació",
         color="Country",
         barmode="group"
     )
 
-    fig_bar.update_layout(yaxis_title="Diferència en %", xaxis_title="Macronutrient")
+    fig_bar.update_layout(yaxis_title="Diferència", xaxis_title="Macronutrient")
 
     st.plotly_chart(fig_bar, use_container_width=True)
